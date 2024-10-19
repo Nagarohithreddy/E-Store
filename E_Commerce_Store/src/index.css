@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+  background: #f8f8f8;
+}
+
+img {
+  width: 100%; /* Make images responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive grid layout for product display */
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Filters Container */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 10px 20px; 
+  background-color: #f3f3f3; 
+  border-bottom: 1px solid #ddd; /* Separator line */
+  margin-bottom: 20px; /* Spacing below filters */
+}
+
+.filters-container input,
+.filters-container select {
+  margin-right: 15px; /* Space between elements */
+  padding: 10px; /* Add padding for better touch targets */
+  min-width: 150px; /* Set a minimum width */
+}
+
+/* Button styles */
+.btn {
+  border: none;
+  outline: none;
+  background: #ff6f61;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn:hover {
+  background: #ff4a3a;
+  transform: scale(1.05);
+}
+
+/* Heading styles */
+.heading {
+  padding: 25px 0;
+  text-align: center;
+  color: #333;
+  font-size: 2em;
+}
+
+.cartCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  margin-bottom: 20px;
+  padding: 14px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cartCard img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.cartCard h5 {
+  margin: 0;
+}
+
+.cartCard button {
+  border: none;
+  outline: none;
+  background: #ff6f61;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.cartCard button:hover {
+  background: #ff4a3a;
+}
+
+
+
+.footer {
+  background-color: #232F3E; 
+  color: white; 
+  padding: 20px 0; 
+  text-align: center; 
+}
+
+.footer-container {
+  display: flex; /* Flex display for footer */
+  justify-content: space-between; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+}
+
+.footer-section {
+  flex: 1; /* Each section will take equal space */
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px; 
+}
+
+.footer-section a {
+  color: white; 
+  text-decoration: none; 
+}
+
+.footer-section a:hover {
+  color: #FFD700; 
+}
+
+
+.social-icons {
+  display: block; 
+  justify-content: center; 
+  margin-top: 10px; 
+}
+
+.social-icons .social-icon {
+  color: white; 
+  font-size: 24px; 
+  margin: 0 10px; 
+  transition: color 0.3s; 
+}
+
+.social-icons .social-icon:hover {
+  color: #FFD700; /* Gold on hover */
+}
+
+.footer-bottom {
+  margin-top: 20px; 
+  font-size: 14px; 
+}
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column; /* keeping filters vertically on smaller screens */
+    align-items: flex-start; 
+    padding: 10px; 
+  }
+
+  .filters-container input,
+  .filters-container select {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+
+  .productsWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  }
+
+  .heading {
+    font-size: 1.5em; 
+  }
+
+  .footer-container {
+    flex-direction: column; 
+    align-items: center; 
+  }
+}
+
+@media (max-width: 480px) {
+  .productsWrapper {
+    grid-template-columns: 1fr; 
+  }
+
+  .card {
+    padding: 15px; 
+  }
+}
